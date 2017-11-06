@@ -105,7 +105,6 @@ $scope.addComment = function () {
     $scope.db.insert('comments', {"comment": $scope.user.comment,
                     "username": $rootScope.userInfo.username})
                 .then(function(results) {
-                    console.log(results)
                 })
 $scope.getAll();
 
@@ -114,15 +113,11 @@ $scope.getAll();
 $scope.getAll = function (){
 $scope.allComment = [];
 $scope.db.selectAll("comments").then(function(results) {
-    for (var i = results.rows.length; i > 0; i--) {
+   for (var i = 0; i < results.rows.length; i++) {
         $scope.allComment.push(results.rows[i])
     }
-    
-  console.log($scope.allComment )  
 })
 } 
 $scope.getAll();
-
-
 
 })
