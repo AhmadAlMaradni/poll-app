@@ -1,0 +1,90 @@
+<div ng-controller="pollController" class="mainDiv">
+
+  <h1>Simple Polls App</h1>
+  
+  <form   ng-submit="AddPoll()" class="mainForm">
+      <ng-md-icon icon="insert_chart" class="pollIcon"></ng-md-icon> 
+      <input type="text" ng-model="polls.title" class="addPolls" placeholder="type here your poll...." />
+      <br>
+
+        <md-input-container flex="50">
+          <label>Option 1</label>
+          <input required name="poll_option" ng-model="polls.options1">
+          <div ng-messages="projectForm.clientName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+          <label>Option 2</label>
+          <input required name="poll_option" ng-model="polls.options2">
+          <div ng-messages="projectForm.clientName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+          <label>Option 2</label>
+          <input required name="poll_option" value="{{option.id}}" ng-model="polls.options3">
+          <div ng-messages="projectForm.clientName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <br>
+
+      <md-button type="submit" id="submit" value="Submit" class="md-raised md-warn" style="background-color: #1e81a0;">OK</md-button>
+  </form>
+
+
+    <div>
+      <h2>Latest Polls</h2>
+      <ul id="pollList" ng-show="currentPage == 'pollList'">
+        <li ng-repeat="poll in polls">
+          <a ng-click="choosePoll(poll.id)">{{poll.title}}</a>
+        </li>
+      </ul>
+
+
+      <form id="poll"  ng-show="currentPage == 'pollVote'">
+        <h4>{{activePoll.title}}</h4>
+        <ul>
+          <li ng-repeat="option in activePoll.options">   
+            <input type="radio" name="poll_option" ng-model="idValue.selectedOption" id="option{{option.id}}"  value='{{option.id}}' />
+            <label for="option{{option.id}}">{{option.text}}</label>
+          </li>
+        </ul>
+        <button class="btn btn-primary" ng-click="vote(idValue)">Vote</button>
+        <a class="btn btn-danger"  ng-click="mainPollPage()">Cancel</a>
+      </form>
+
+
+      <div id="pollResults"  ng-show="currentPage == 'pollResults'">
+        <ul>
+          <li ng-repeat="option in activePoll.options">
+            <span>{{option.text}}</span>
+            ({{option.count}})
+          </li>
+        </ul>
+        <a class="btn btn-primary" ng-click="mainPollPage()">Back to Polls</a>
+      </div>
+
+      
+       <form name="form" ng-submit="addComment()" role="form" class="mainForm">
+                        <div class="form-group">
+                            <label for="username">comment</label>
+                            <input type="text" name="username" id="username" class="form-control" ng-model="user.comment" required />
+                        </div>
+                       
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </div>
+
+          <div>
+          <div ng-repeat="x in allComment">
+              <h5> <p style="color: #337ab7;">{{x.username}} : </p> {{x.comment}}</h5> <hr>
+          </div>
+          </div>
+      </form>
+
+  </div>
+</div>

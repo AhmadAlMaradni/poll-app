@@ -1,0 +1,25 @@
+{
+  "name": "smart-way",
+  "version": "1.0.0",
+  "authors": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "client/lib"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "angular-route": "latest",
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+    "metisMenu": "metismenu#^2.6.3",
+    "ngInfiniteScroll": "^1.3.4",
+    "angular-material": "^1.1.3",
+    "angular-aria": "1.5.9",
+    "angular-material-icons": "^0.7.1",
+    "angular-bootstrap": "^2.5.0",
+    "angular-websql": "^1.1.0"
+  }
+}

@@ -1,0 +1,124 @@
+.error {
+     color: red;
+}
+
+h5 {
+	font-weight: 400;
+}
+
+.container {
+	margin-top: 80px;
+	width: 400px;
+	height: 700px;
+}
+
+.tabs .indicator {
+	background-color: #e0f2f1;
+	height: 60px;
+	opacity: 0.3;
+}
+
+.form-container {
+	padding: 40px;
+	padding-top: 10px;
+}
+
+.confirmation-tabs-btn {
+	position: absolute;
+}
+
+.visitHis {
+	margin-left: 0px;
+	margin-right: 0px;
+	font-family:verdana;
+	color: #545454;
+}
+
+
+.addPolls {
+    width: 80%;
+    height: 36px;
+    background-color: #f9f9f9;
+    border-color: #f9f9f9;
+    font-size: 15px;
+    border-style: double;
+    border-bottom-width: 2px;
+    border-bottom-color: #1e81a0;
+    margin-bottom: 30px;
+}
+
+.mainForm {
+	padding: 70px;
+    border: outset;
+    background-color: #f9f9f9;
+}
+
+.pollIcon{
+	    color: #1e81a0;
+}
+
+.loginTabs {
+	padding: 12%;
+	margin-left: 10%;
+    margin-right: 10%;
+}
+
+ md-tabs-canvas {
+    /*color: red !important;*/
+    background-color:#a1bdd8 !important;
+}
+
+.passVali {
+	color: red;
+	font-size: 15px;
+}
+
+.pic {
+	 height: 206px;
+    width: 186px;
+    margin-left: 32%;
+     margin-top: 21px;
+    border-radius: 37px;
+}
+
+.profile {
+  margin: 0 auto;
+    width: 50%;
+    height: 475px;
+    background: rgb(93, 93, 93);
+    border-radius: 10px;
+ }
+
+.title {
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    display: block;
+    float: left;
+    font-size: 24px;
+}
+
+.title2 {
+    width: 52%;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    display: block;
+    float: left;
+    font-size: 24px;
+    margin-left: 122px;
+}
+
+.editBtn {
+	background-color: white;
+    color: #5c5c5c;
+    margin-top: 20px;
+    border-radius: 14px;
+}
+
+
+.mainDiv {
+    padding-left: 6%;
+    padding-right: 6%;
+}

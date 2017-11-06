@@ -1,0 +1,43 @@
+<div class="profile" ng-controller="homeController">
+  <div class="image-container" ng-hide="Prof">
+  	<img  class="pic" src="../../style/avatar-img.png">
+    <div class="over"></div>
+    </div>
+
+    <div class="title" ng-hide="Prof">
+      <p>E-mail : {{userInfo.email}} </p>
+      <p>Name : {{userInfo.username}}</p>
+      <p>city  : {{userInfo.city}}</p>
+      <button ng-click="Prof=true" class="editBtn">Edit</button>
+    </div>
+
+
+  <div class="title2" ng-show="Prof">
+    <form name="form" ng-submit="editProfile()" role="form">
+      <div class="form-group">
+        <label for="username">UserName</label>
+        <input type="text" name="firstName" id="firstName" class="form-control" ng-model="user.username" required />
+      </div>
+      
+      <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+        <label for="username">E-mail</label>
+        <input type="email" name="lastName" id="Text1" class="form-control" ng-model="user.email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="username">City</label>
+        <input type="text" name="username" id="username" class="form-control" ng-model="user.city" required />
+      </div>
+
+      <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="form-control" ng-model="user.password" required />
+        <span ng-show="ShowpassVali" class="passVali">{{passwordValidation}}</span>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" ng-disabled="form.$invalid" class="editBtn">Save</button>
+      </div>
+
+    </div>
+  </div>
